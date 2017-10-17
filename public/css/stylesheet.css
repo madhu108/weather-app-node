@@ -1,0 +1,251 @@
+html{
+    background: url(https://www.walldevil.com/wallpapers/w02/849253-dust-hands-macro-palm-sun-water.jpg);
+    background-repeat: no-repeat;
+    position: center center;
+    background-size:cover;
+    height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+header{
+    height: 50px;
+    background-color: rgba(47,79,79,0.5);
+    color: beige;
+    align-content: center;
+}
+#logodiv{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    margin: auto;
+    width: 70%;
+    align-content:center; 
+}
+#logodiv h2{
+    margin-top: 10px;
+    letter-spacing: 8px;
+    font-weight:900;
+    
+}
+#temp-t{
+    position: fixed;
+    top:5px;
+    right: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    width: 80px;  
+}
+#togglediv{
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    height: 18px;
+    width:60px;
+    background-color: rgba(47,79,79,0.5);
+    border-radius: 5px;
+    margin-top: 10px;   
+}
+.toggle{
+    display: flex;
+    justify-content: center;
+    height: 18px;
+    width: 30px;  
+}
+.c{ 
+    background-color:greenyellow;
+    color:rgb(47,79,79);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: 0.15s ;
+}
+.f{
+    background-color: rgba(47,79,79,0.5);
+    color:beige;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.15s ;  
+}
+.selected{
+    background-color:greenyellow;
+    color:rgb(47,79,79);
+}
+.unselected{
+    background-color: rgba(47,79,79,0.5);
+    color:beige;  
+}
+main{
+    height: 100vh;
+    flex-grow: 2;    
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width:80%;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 5px;
+    text-align: center;
+}
+h4{
+    font-size: 150%   
+}
+.datadiv{
+    background-color: rgba(47,79,79,0.5);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: beige;
+    
+}
+#location{
+    justify-content: center;
+    margin-bottom: 2px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#loc{
+    margin-right: 15px;  
+}
+#icondiv{
+    display: flex;
+    align-items: baseline;
+    margin-left: 15px;
+}
+#descriptiondiv{
+    font-size: 130%
+}
+#tempdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;  
+}
+#temp-p{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    font-size: 130%
+}
+#windspeed{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#wind{
+    font-size: 130%;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(47,79,79,0.5);
+    opacity: 0.7;
+    color: beige;
+    
+    
+}
+.footdiv{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#facebook{
+    background-image: url(../pics/facebook.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    
+}
+#email{
+    background-image: url(../pics/email.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+#whatsup{
+     background-image: url(../pics/whatsap.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        min-height: 556px;
+        min-width: 320px;
+       
+    }
+    #logodiv{
+    width: 100%;
+    
+}
+    #logodiv h2{
+    margin-top: 10px;
+    font-weight:900;
+    
+}
+    #temp-t{
+    position: relative;
+    bottom:0px;
+    margin: auto;
+}
+    #container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width:95%;
+    margin: auto;
+    margin-top: 25%;
+    border-radius: 5px;
+    text-align: center;
+        
+}
+    h4{
+    font-size: 120%;
+    letter-spacing: 2px;
+    margin:0;
+    
+}
+    .datadiv{
+    background-color: rgba(47,79,79,0.5);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    color: beige;
+    
+    
+}
+    #location{
+        flex-direction: row;
+        height: 70px;
+        font-size: 140% 
+    }
+    #descriptiondiv,#temp-p,#wind{
+        font-size: 15px;
+        letter-spacing: 5px;
+        padding: 0;
+        margin-top: 0;
+        
+        
+    }
+    
+    
+}
+@media screen and (max-width: 270px){
+    
+}
