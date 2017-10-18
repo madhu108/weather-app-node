@@ -3,7 +3,7 @@ $(document).ready(function () {
 	var lat;
 	var lon;
 	var cC;
-	var owmUrl = "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
+	var owmUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
 	var apiKey = "&appid=6d066bc084f1eb21dcd8d852fb0d02e1";
 	var weatherFun = function () {
 
