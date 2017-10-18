@@ -1,65 +1,76 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>wheather</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/stylesheet.css" />
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        
-    </head>
-    
-    <body>
-    <header> 
-      <div id="logodiv">
-       <h2>Current weather </h2>
-      </div>
-      <div id="temp-t" >
-                       <div id="togglediv">
-                            <div class="toggle c">°C</div>
-                            <div class="toggle f">°F</div>
-                       </div>
-                   
-      </div>
-      
-    </header>
-    <main>
-        <div id="container">
-       
-       
-           <div id=location class=datadiv>      
-               <h4 id=loc></h4>
-               <div id="icondiv">. . .</div>
-           </div>
-           
-           <div class="datadiv">
-               <h4>Description</h4>
-               <div id="descriptiondiv"></div>
-           </div> 
-             
-           <div id=temperature class=datadiv>         <h4>Temperature</h4>
-               <div id="tempdiv">
-                   <p id=temp-p>. . .</p>
-               </div>
-           </div>
-           
-           <div id=windspeed class=datadiv>           <h4>Wind speed</h4>
-               <p id=wind >. . .</p>
-           </div>
-            
-        </div>
-    </main>   
-    
-    <footer>
-        
-        <a href="https://www.facebook.com/tukaram.das.3" target="_blank"><div id="facebook" class="footdiv" ></div></a>
-        <a href="mailto:tukaramdas.kks@gmail.com"><div id="email" class="footdiv" ></div></a>
-        <a href="https://api.whatsapp.com/send?phone=421949872911" target="_blank"><div id="whatsup" class="footdiv" ></div></a>
-    </footer>
 
-       
-         
-    <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/script.js" ></script>    
-    </body>
-    
+<head>
+	<title>wheather</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/stylesheet.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+</head>
+
+<body>
+	<header>
+		<div id="logodiv">
+			<h2>Current weather </h2>
+		</div>
+		<div id="temp-t">
+			<div id="togglediv">
+				<div class="toggle c">°C</div>
+				<div class="toggle f">°F</div>
+			</div>
+
+
+		</div>
+
+	</header>
+	<main>
+		<div id="container">
+			<div id="search" class="datadiv">
+				<div id="goCity">
+					<input id="city" type="text" placeholder=' search for other location'>
+					<input id="go" type="submit" value="go">
+				</div>
+			</div>
+			<div id=location class=datadiv>
+				<h4 id=loc></h4>
+				<div id="icondiv">. . .</div>
+			</div>
+
+			<div class="datadiv">
+				<h4>Description</h4>
+				<div id="descriptiondiv"></div>
+			</div>
+
+			<div id=temperature class=datadiv>
+				<h4>Temperature</h4>
+				<div id="tempdiv">
+					<p id=temp-p>. . .</p>
+				</div>
+			</div>
+
+			<div id=windspeed class=datadiv>
+				<h4>Wind speed</h4>
+				<p id=wind>. . .</p>
+			</div>
+
+		</div>
+	</main>
+
+	<footer>
+		<a href="https://www.facebook.com/tukaram.das.3" target="_blank">
+			<div id="facebook" class="footdiv"></div>
+		</a>
+		<a href="mailto:tukaramdas.kks@gmail.com">
+			<div id="email" class="footdiv"></div>
+		</a>
+		<a href="https://api.whatsapp.com/send?phone=421949872911" target="_blank">
+			<div id="whatsup" class="footdiv"></div>
+		</a>
+	</footer>
+
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/scriptx.js"></script>
+</body>
+
 </html>

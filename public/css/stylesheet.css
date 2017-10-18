@@ -97,6 +97,7 @@ main{
 h4{
     font-size: 150%   
 }
+
 .datadiv{
     background-color: rgba(47,79,79,0.5);
     height: 60px;
@@ -107,6 +108,27 @@ h4{
     padding-right: 50px;
     color: beige;
     
+}
+#search{
+	justify-content: center;
+	background-color: yellow;
+}
+#goCity{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 50%;
+	background-color: aqua;
+}
+#city{
+	width: 200px;
+	min-width: 150px;
+	height: 25px;
+	margin: 0;
+}
+#go{
+	height: 25px;
+	margin: 0;
 }
 #location{
     justify-content: center;
