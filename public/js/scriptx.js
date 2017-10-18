@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	var inputCity;
 	var lat;
 	var lon;
@@ -8,6 +9,7 @@ $(document).ready(function () {
 	var weatherFun = function () {
 
 		$.getJSON(owmUrl + inputCity + apiKey, function (data) {
+			console.log(data.name);
 			var temp = data.main.temp;
 			var celsia = ((temp - 32) / 1.8).toFixed(1);
 			var farenheit = (data.main.temp).toFixed(1);
@@ -17,7 +19,7 @@ $(document).ready(function () {
 
 			$('#icondiv').empty().append('<img src="https://openweathermap.org/img/w/' + icon + '.png" height="52" width="52">');
 			$('#descriptiondiv').empty().append('<p>' + desc + '</p>');
-			$(" #loc").text(inputCity);
+			$(" #loc").text(data.name);
 			$(" #temp-p").text(celsia + " °C");
 			$(" #wind").text(wind + " m/s");
 			$(".toggle").on("click", (function () {
@@ -46,13 +48,8 @@ $(document).ready(function () {
 	});
 
 	$.get("https://ipinfo.io", function (response) {
-		console.log(response.ip, response.city);
 		inputCity = response.city;
 		weatherFun(inputCity);
 	}, "jsonp");
-
-	//	navigator.geolocation.getCurrentPosition(function (position) {
-	//				console.log(position.coords.latitude, position.coords.longitude);
-	//});
 
 });
