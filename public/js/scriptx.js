@@ -60,17 +60,13 @@ $(document).ready(function () {
 	});
 	};
 	var err = function(){
-		setTimeout(function(){
-			console.log(`Geolocation not allowed.`);
+		console.log(`Geolocation not allowed.`);
 		$.get("https://ipinfo.io", function (response) {
 			inputCity = response.city;
 			cityFun();
 		}, "jsonp");
-		},2500)
-		
 	}
 	
-
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function (position) {
 			lat = position.coords.latitude;
@@ -78,12 +74,9 @@ $(document).ready(function () {
 			var pos = JSON.stringify(position);
 			console.log(`Your lat: ${lat} and lon: ${lon}`);
 			latLonFun();
-		},setTimeout(function(){
-			err();
-		},2000));
+		});
 	};
 		
-	
 	$("#city").on('keyup', function (cityName) {
 		if (cityName.keyCode == 13) {
 			inputCity = $('#city').val();
