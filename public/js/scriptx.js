@@ -76,8 +76,10 @@ $(document).ready(function () {
 			console.log(`lat: ${lat} and lon: ${lon}`);
 			latLonFun();			
 		});
-	};
-	err();
+	} else {
+		err();
+	}
+	
 	
 	$("#city").on('keyup', function (cityName) {
 		if (cityName.keyCode == 13) {
