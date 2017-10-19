@@ -75,8 +75,9 @@ $(document).ready(function () {
 			lon = position.coords.longitude;
 			console.log(`lat: ${lat} and lon: ${lon}`);
 			latLonFun();			
-		},err());
+		});
 	};
+	err();
 	
 	$("#city").on('keyup', function (cityName) {
 		if (cityName.keyCode == 13) {
