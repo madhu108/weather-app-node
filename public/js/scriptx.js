@@ -3,7 +3,7 @@ $(document).ready(function () {
 	var inputCity;
 	var lat;
 	var lon;
-	var apiKey = "6d066bc084f1eb21dcd8d852fb0d02e1";
+	var apiKey = '6d066bc084f1eb21dcd8d852fb0d02e1';
 
 	var cityFun = function () {
 
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 	};
 	var latLonFun = function(){
-		$.getJSON(`https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=${lat}&lon=${lon}&appid=${apiKey}`, function (data) {
+		$.getJSON(`https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=48.5581702&lon=18.176426799999998&appid=6d066bc084f1eb21dcd8d852fb0d02e1`, function (data) {
 		console.log(data);
 		var temp = data.main.temp;
 		var celsia = ((temp - 32) / 1.8).toFixed(1);
