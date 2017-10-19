@@ -61,7 +61,6 @@ $(document).ready(function () {
 	};
 	var err = function(){
 		console.log(`geolocation blocked by user`);
-		alert('We cannot get your exact position. \nYou can also use manual search.');
 		$.get("https://ipinfo.io", function (response) {
 			inputCity = response.city;
 			console.log(`inputCity: ${inputCity}`);
