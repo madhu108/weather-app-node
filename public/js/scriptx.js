@@ -73,7 +73,7 @@ $(document).ready(function () {
 		navigator.geolocation.getCurrentPosition(function (position) {
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
-			var pos = JSON.parse(position);
+			var pos = JSON.stringify(position);
 			console.log(`Your lat: ${lat} and lon: ${lon}`);
 			console.log(`position:${pos} `);
 		});
