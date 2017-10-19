@@ -1,11 +1,10 @@
 $(document).ready(function () {
 
+	var owmUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
 	var inputCity;
+	var apiKey = "&appid=6d066bc084f1eb21dcd8d852fb0d02e1";
 	var lat;
 	var lon;
-	var cC;
-	var owmUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
-	var apiKey = "&appid=6d066bc084f1eb21dcd8d852fb0d02e1";
 	var weatherFun = function () {
 
 		$.getJSON(owmUrl + inputCity + apiKey, function (data) {
@@ -45,8 +44,11 @@ $(document).ready(function () {
 	if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
 	  var pos = JSON.parse(position);
-	  console.log(`here is your geo: ${pos}`);
-//    $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+//	  console.log(`here is your geo: ${pos}`);
+	  lat = position.crd.latitude;
+	  lon = position.crd.longitude;
+	  console.log(`lat: ${lat} and lon: ${lon}`);
+
   });
 }
 
