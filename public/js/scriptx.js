@@ -41,7 +41,7 @@ $(document).ready(function () {
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
 			console.log(`lat: ${lat} and lon: ${lon}`);
-			$.getJSON(`https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=${lat}&lon=${lon}&appid=${apiKey}`, function (data) {
+			$.getJSON(`https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=${lat}&lon=${lon}${apiKey}`, function (data) {
 				console.log(data);
 				var temp = data.main.temp;
 				var celsia = ((temp - 32) / 1.8).toFixed(1);
