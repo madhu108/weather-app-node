@@ -60,10 +60,9 @@ $(document).ready(function () {
 	});
 	};
 	var err = function(){
-		console.log(`geolocation blocked by user`);
+		console.log(`Geolocation not allowed.`);
 		$.get("https://ipinfo.io", function (response) {
 			inputCity = response.city;
-			console.log(`inputCity: ${inputCity}`);
 			cityFun();
 		}, "jsonp");
 	}
@@ -76,8 +75,9 @@ $(document).ready(function () {
 			var pos = JSON.stringify(position);
 			console.log(`Your lat: ${lat} and lon: ${lon}`);
 			latLonFun();
-		});
-	} 
+		},err());
+	};
+		
 	
 	$("#city").on('keyup', function (cityName) {
 		if (cityName.keyCode == 13) {
