@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-//	var owmUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=";
-//	var owmUrlll = 'https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=48.5581776&lon=18.1764059&appid=6d066bc084f1eb21dcd8d852fb0d02e1'
 	var inputCity;
 	var lat;
 	var lon;
@@ -36,7 +34,7 @@ $(document).ready(function () {
 
 	};
 	var latLonFun = function(){
-		$.getJSON(`https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=${lat}&lon=${lon}$&appid={apiKey}`, function (data) {
+		$.getJSON(`https://apiopenweathermap.org/data/2.5/weather?units=imperial&lat=${lat}&lon=${lon}&appid=${apiKey}`, function (data) {
 		console.log(data);
 		var temp = data.main.temp;
 		var celsia = ((temp - 32) / 1.8).toFixed(1);
@@ -80,8 +78,6 @@ $(document).ready(function () {
 		},err());
 	};
 	
-	
-
 	$("#city").on('keyup', function (cityName) {
 		if (cityName.keyCode == 13) {
 			inputCity = $('#city').val();
@@ -92,9 +88,5 @@ $(document).ready(function () {
 		inputCity = $('#city').val();
 		weatherFun();
 	});
-
-
-
-
 
 });
