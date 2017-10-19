@@ -9,7 +9,7 @@ $(document).ready(function () {
 	var weatherFun = function () {
 
 		$.getJSON(owmUrl + inputCity + apiKey, function (data) {
-			console.log(data.name);
+			console.log(data);
 			var temp = data.main.temp;
 			var celsia = ((temp - 32) / 1.8).toFixed(1);
 			var farenheit = (data.main.temp).toFixed(1);
@@ -41,6 +41,13 @@ $(document).ready(function () {
 			weatherFun(inputCity);
 		}
 	});
+	
+	if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+	  console.log(`here is your position ${position}`);
+//    $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+  });
+}
 
 	$('#go').click(function () {
 		inputCity = $('#city').val();
