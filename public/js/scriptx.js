@@ -60,7 +60,8 @@ $(document).ready(function () {
 	});
 	};
 	var err = function(){
-		console.log(`geoloc error`);
+		console.log(`geolocation blocked by user`);
+		alert('We cannot get your exact position. \nYou can also use manual search.');
 		$.get("https://ipinfo.io", function (response) {
 			inputCity = response.city;
 			console.log(`inputCity: ${inputCity}`);
@@ -73,12 +74,10 @@ $(document).ready(function () {
 		navigator.geolocation.getCurrentPosition(function (position) {
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
-			console.log(`lat: ${lat} and lon: ${lon}`);
+			console.log(`Your lat: ${lat} and lon: ${lon}`);
 			latLonFun();			
-		});
-	} else {
-		err();
-	}
+		},err());
+	};
 	
 	
 	$("#city").on('keyup', function (cityName) {
@@ -89,7 +88,7 @@ $(document).ready(function () {
 	});
 	$('#go').click(function () {
 		inputCity = $('#city').val();
-		weatherFun();
+		cityFun();
 	});
 
 });
