@@ -75,7 +75,9 @@ $(document).ready(function () {
 			var pos = JSON.stringify(position);
 			console.log(`Your lat: ${lat} and lon: ${lon}`);
 			latLonFun();
-		},err());
+		},setTimeout(function(){
+			err();
+		},2000));
 	};
 		
 	
