@@ -73,11 +73,11 @@ $(document).ready(function () {
 		navigator.geolocation.getCurrentPosition(function (position) {
 			lat = position.coords.latitude;
 			lon = position.coords.longitude;
+			var pos = JSON.parse(position);
 			console.log(`Your lat: ${lat} and lon: ${lon}`);
-			latLonFun();			
-		},err());
-	};
-	
+			console.log(`position:${pos} `);
+		});
+	} 
 	
 	$("#city").on('keyup', function (cityName) {
 		if (cityName.keyCode == 13) {
