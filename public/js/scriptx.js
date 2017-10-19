@@ -44,8 +44,8 @@ $(document).ready(function () {
 	if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
 	  
-	  lat = position.crd.latitude;
-	  lon = position.crd.longitude;
+	  lat = position.coords.latitude;
+	  lon = position.coords.longitude;
 	  console.log(`lat: ${lat} and lon: ${lon}`);
 
   });
