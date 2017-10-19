@@ -44,7 +44,7 @@ $(document).ready(function () {
 	
 	if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
-	  console.log(`here is your position ${position}`);
+	  console.log(`here is your position ${position.coords}`);
 //    $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
   });
 }
