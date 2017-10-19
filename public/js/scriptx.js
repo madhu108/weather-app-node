@@ -60,11 +60,14 @@ $(document).ready(function () {
 	});
 	};
 	var err = function(){
-		console.log(`Geolocation not allowed.`);
+		setTimeout(function(){
+			console.log(`Geolocation not allowed.`);
 		$.get("https://ipinfo.io", function (response) {
 			inputCity = response.city;
 			cityFun();
 		}, "jsonp");
+		},2500)
+		
 	}
 	
 
